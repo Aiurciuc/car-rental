@@ -1,0 +1,13 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 70px;
+  z-index: 1000;
+  background: var(--primary);
+  padding: 0px 50px;
+}
+
+.title{
+  margin:0;
+}

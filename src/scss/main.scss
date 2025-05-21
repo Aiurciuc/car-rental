@@ -1,2 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-@import './variables.scss';
+@import './variables';
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-title-XL);
+  line-height: var(-line-height-title-XL);
+  color: var(--black);
+
+}
