@@ -1,0 +1,27 @@
+.button {
+  box-sizing: border-box;
+  border-radius: 0.25rem;
+  height: 40px;
+  width: 100%;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.buttonPrimary {
+  background-color: var(--primary);
+  color: var(--white);
+  border: 1px solid var(--primary);
+}
+
+.inverted {
+  background-color: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}

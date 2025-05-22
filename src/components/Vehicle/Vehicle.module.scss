@@ -6,3 +6,21 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+// .priceContainer {
+//   display: flex;
+//   // justify-content: space-between;
+//   align-items: center;
+//   margin-top: 1rem;
+// }
+
+.price {
+  font-weight: bold;
+  margin-right: 0.25rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
