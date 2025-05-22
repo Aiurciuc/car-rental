@@ -29,8 +29,8 @@ function isObject(value) {
 
 function sanitizeKey(key) {
   if (/^[a-zA-Z]$/.test(key.charAt(0))) {
-    return key.toLowerCase();
+    return key.charAt(0).toLowerCase() + key.slice(1);
   } else {
-    return key.slice(1).toLowerCase();
+    return key.charAt(1).toLowerCase() + key.slice(2);
   }
 }

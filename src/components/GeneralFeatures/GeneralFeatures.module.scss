@@ -1,0 +1,18 @@
+.generalFeatures {
+
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+column-gap: 2rem;
+row-gap: 0.5rem;
+}
+
+.icon {
+  // width: 70%;
+  // object-fit: cover;
+  width: var(--font-body-M)
+}
+
+.feature{
+  display: flex;
+  gap: 1rem;
+}

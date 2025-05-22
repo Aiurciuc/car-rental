@@ -1,33 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import './variables';
 
-h1 {
+.title-XL {
   font-family: 'Open Sans', sans-serif;
   font-size: var(--font-title-XL);
-  line-height: var(-line-height-title-XL);
+  line-height: var(--line-height-title-XL);
   color: var(--black);
 }
 
-h2 {
+.title-L {
   font-family: 'Open Sans', sans-serif;
   font-size: var(--font-title-L);
-  line-height: var(-line-height-title-L);
+  line-height: var(--line-height-title-L);
   color: var(--black);
-
 }
 
-h3 {
+.title-M {
   font-family: 'Open Sans', sans-serif;
   font-size: var(--font-title-M);
-  line-height: var(-line-height-title-M);
+  line-height: var(--line-height-title-M);
   color: var(--black);
-
 }
 
-h4 {
+.title-S {
   font-family: 'Open Sans', sans-serif;
   font-size: var(--font-title-S);
-  line-height: var(-line-height-title-S);
+  line-height: var(--line-height-title-S);
   color: var(--black);
-
+}
+.subtitle-XL {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-subtitle-XL);
+  line-height: var(--line-height-subtitle-XL);
+  color: var(--black);
+}
+.subtitle-L {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-subtitle-L);
+  line-height: var(--line-height-subtitle-L);
+  color: var(--black);
+}
+.subtitle-M {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-subtitle-M);
+  line-height: var(--line-height-subtitle-M);
+  color: var(--black);
+}
+.subtitle-S {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-subtitle-S);
+  line-height: var(--line-height-subtitle-S);
+  color: var(--black);
+}
+.body-L {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-body-L);
+  line-height: var(--line-height-body-L);
+  color: var(--black);
+}
+.body-M {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-body-M);
+  line-height: var(--line-height-body-M);
+  color: var(--black);
+}
+.body-S {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-body-S);
+  line-height: var(--line-height-body-S);
+  color: var(--black);
 }

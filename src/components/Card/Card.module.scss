@@ -1,5 +1,5 @@
 .card {
-  background: var(--white);
+  background: var(--grey-light);
   border-radius: 1rem;
   box-shadow: 0 2px 16px rgba(0,0,0,0.08);
   overflow: hidden;
@@ -8,7 +8,10 @@
   max-width: 450px;
   min-width: 350px;
   margin: 1rem auto;
-  transition: box-shadow 0.2s;
+  // transition: box-shadow 0.2s;
+  padding: 0.5rem;
+  // align-items: center;
+  // justify-content: center;
 }
 
 .card:hover {
@@ -20,6 +23,9 @@
   width: 70%;
   object-fit: cover;
   background: var(--grey-light);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .cardContent {

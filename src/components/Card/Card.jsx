@@ -1,31 +1,40 @@
+import GeneralFeatures from "../GeneralFeatures/GeneralFeatures";
 import styles from "./Card.module.scss";
 
-function Card({ car: { pictureurl, vehmakemodel } }) {
+function Card({
+  car: {
+    pictureURL,
+    vehMakeModel,
+    fuelType,
+    transmissionType,
+    passengerQuantity,
+    baggageQuantity,
+    doorCount,
+    airConditionInd
+  },
+}) {
   return (
     <div className={styles.card}>
-      {pictureurl && (
+      {vehMakeModel.name && <h3 className="subtitle-M">{vehMakeModel.name}</h3>}
+      {pictureURL && (
         <img
-          src={pictureurl}
-          alt={vehmakemodel.name}
+          src={pictureURL}
+          alt={vehMakeModel.name}
           className={styles.cardImage}
         />
       )}
+      {}
+
       <div className={styles.cardContent}>
-        
-        {vehmakemodel.name && (
-          <h4 >{vehmakemodel.name}</h4>
-        )}
-        {/* {features && (
-          <ul className={styles.cardFeatures}>
-          {features.map((feature, idx) => (
-            <li key={idx}>{feature}</li>
-            ))}
-            </ul>
-            )}
-            {price && <div className={styles.cardPrice}>{price}</div>}
-            {children} */}
+        <GeneralFeatures
+          bag={baggageQuantity}
+          fuel={fuelType}
+          door={doorCount}
+          person={passengerQuantity}
+          snowflake={airConditionInd}
+          transmission={transmissionType}
+        />
       </div>
-      
     </div>
   );
 }

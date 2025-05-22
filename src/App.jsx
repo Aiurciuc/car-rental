@@ -25,8 +25,8 @@ function App() {
         <Layout className={styles.body}>
           {cars.map((car) => (
             <Card
-              key = {car.id}
-              car = {car}
+              key={car.id}
+              car={car}
             />
           ))}
         </Layout>
