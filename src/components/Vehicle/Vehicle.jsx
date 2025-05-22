@@ -1,7 +1,8 @@
-import GeneralFeatures from "../GeneralFeatures/GeneralFeatures";
-import styles from "./Card.module.scss";
+import VehicleFeatures from "./VehicleFeatures/VehicleFeatures";
+import styles from "./Vehicle.module.scss";
+import Card from "../shared/Card/Card";
 
-function Card({
+function Vehicle({
   car: {
     pictureURL,
     vehMakeModel,
@@ -14,19 +15,19 @@ function Card({
   },
 }) {
   return (
-    <div className={styles.card}>
-      {vehMakeModel.name && <h3 className="subtitle-M">{vehMakeModel.name}</h3>}
+    <Card>
+      {vehMakeModel.name && <h3 className={`subtitle-M` }>{vehMakeModel.name}</h3>}
       {pictureURL && (
         <img
           src={pictureURL}
           alt={vehMakeModel.name}
-          className={styles.cardImage}
+          className={styles.vehicleImage}
         />
       )}
       {}
 
       <div className={styles.cardContent}>
-        <GeneralFeatures
+        <VehicleFeatures
           bag={baggageQuantity}
           fuel={fuelType}
           door={doorCount}
@@ -35,8 +36,8 @@ function Card({
           transmission={transmissionType}
         />
       </div>
-    </div>
+    </Card>
   );
 }
 
-export default Card;
+export default Vehicle;

@@ -1,7 +1,7 @@
 import styles from "./App.module.scss";
-import Card from "./components/Card/Card";
+import Vehicle from "./components/Vehicle/Vehicle";
 import Header from "./components/Header/Header";
-import Layout from "./components/Layout/Layout";
+import Layout from "./components/shared/Layout/Layout";
 import { useQuery } from "@tanstack/react-query";
 import { mapCarsResponse } from "./utils/carsMapping";
 
@@ -24,7 +24,7 @@ function App() {
       {!isLoading && (
         <Layout className={styles.body}>
           {cars.map((car) => (
-            <Card
+            <Vehicle
               key={car.id}
               car={car}
             />
