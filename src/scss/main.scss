@@ -6,5 +6,28 @@ h1 {
   font-size: var(--font-title-XL);
   line-height: var(-line-height-title-XL);
   color: var(--black);
+}
+
+h2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-title-L);
+  line-height: var(-line-height-title-L);
+  color: var(--black);
+
+}
+
+h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-title-M);
+  line-height: var(-line-height-title-M);
+  color: var(--black);
+
+}
+
+h4 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: var(--font-title-S);
+  line-height: var(-line-height-title-S);
+  color: var(--black);
 
 }

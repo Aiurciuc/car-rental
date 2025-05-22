@@ -1,25 +1,33 @@
-import styles from './Card.module.scss';
+import styles from "./Card.module.scss";
 
-function Card({ children, image, title, subtitle, price, features }) {
+function Card({ car: { pictureurl, vehmakemodel } }) {
   return (
     <div className={styles.card}>
-      {image && <img src={image} alt={title} className={styles.cardImage} />}
+      {pictureurl && (
+        <img
+          src={pictureurl}
+          alt={vehmakemodel.name}
+          className={styles.cardImage}
+        />
+      )}
       <div className={styles.cardContent}>
-        {title && <h2 className={styles.cardTitle}>{title}</h2>}
-        {subtitle && <h3 className={styles.cardSubtitle}>{subtitle}</h3>}
-        {features && (
-          <ul className={styles.cardFeatures}>
-            {features.map((feature, idx) => (
-              <li key={idx}>{feature}</li>
-            ))}
-          </ul>
+        
+        {vehmakemodel.name && (
+          <h4 >{vehmakemodel.name}</h4>
         )}
-        {price && <div className={styles.cardPrice}>{price}</div>}
-        {children}
+        {/* {features && (
+          <ul className={styles.cardFeatures}>
+          {features.map((feature, idx) => (
+            <li key={idx}>{feature}</li>
+            ))}
+            </ul>
+            )}
+            {price && <div className={styles.cardPrice}>{price}</div>}
+            {children} */}
       </div>
+      
     </div>
   );
 }
-
 
 export default Card;
