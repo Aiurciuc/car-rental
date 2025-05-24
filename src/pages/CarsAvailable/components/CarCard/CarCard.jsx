@@ -3,6 +3,7 @@ import Vendor from "../Vendor/Vendor";
 import CarFeatures from "../CarFeatures/CarFeatures";
 import {Card} from "../../../../components/shared/Card/Card";
 import Button from "../../../../components/shared/Button/Button";
+import { useNavigate } from "react-router";
 
 function CarCard({
   car: {
@@ -16,8 +17,11 @@ function CarCard({
     airConditionInd,
     vendor,
     price,
+    id,
   },
 }) {
+  const navigate = useNavigate();
+
   return (
     <Card.Root>
       <Card.Header title={vehMakeModel.name}>
@@ -51,8 +55,8 @@ function CarCard({
           <span className="body-S">{price.currencyCode}</span>
         </div>
         <div className={styles.buttons}>
-          <Button>Reserve</Button>
-          <Button inverted={true}>Details</Button>
+          <Button inverted={true} onClick={() => navigate(`/car/${id}`)}>Details</Button>
+          <Button onClick={() => console.log(`Car ${vehMakeModel.name} was reserved`)}>Reserve</Button>
         </div>
       </Card.Footer>
     </Card.Root>

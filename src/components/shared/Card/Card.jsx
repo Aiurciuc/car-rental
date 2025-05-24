@@ -1,24 +1,24 @@
 import styles from "./Card.module.scss";
 
-function Root({ children }) {
-  return <div className={styles.card}>{children}</div>;
+function Root({ children, className = "", ...props }) {
+  return <section className={`${styles.card} ${className}`} {...props}>{children}</section>;
 }
 
-function Header({ title, children }) {
+function Header({ title, children, fontClass="subtitle-M" }) {
   return (
-    <section className={styles.cardHeader}>
-      {title && <h3 className={`subtitle-M ${styles.cardTitle}`}>{title}</h3>}
+    <header className={styles.cardHeader}>
+      {title && <h3 className={`${fontClass} ${styles.cardTitle}`}>{title}</h3>}
       {children}
-    </section>
+    </header>
   );
 }
 
 function Content({ children }) {
-  return <section className={styles.cardContent}>{children}</section>;
+  return <main className={styles.cardContent}>{children}</main>;
 }
 
 function Footer({ children }) {
-  return <section className={styles.cardFooter}>{children}</section>;
+  return <footer className={styles.cardFooter}>{children}</footer>;
 }
 
 export const Card = {

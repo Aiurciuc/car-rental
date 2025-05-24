@@ -1,7 +1,9 @@
-import styles from "./App.module.scss";
 import { useQuery } from "@tanstack/react-query";
 import { mapCarsResponse } from "./utils/carsMapping";
 import CarsAvailable from "./pages/CarsAvailable/CarsAvailable";
+import { BrowserRouter, Routes, Route, } from "react-router";
+import CarDetails from "./pages/CarDetails/CarDetails";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   const { isLoading, error, data } = useQuery({
@@ -16,7 +18,33 @@ function App() {
   const { cars, legend } = data || {};
 
   console.log(data);
-  return <>{!isLoading && <CarsAvailable legend={legend} cars={cars} />};</>;
+
+  if (isLoading) return <div>Loading...</div>;
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/"
+          element={<CarsAvailable legend={legend} cars={cars} />}
+        />
+        <Route
+          path="/car/:id"
+          element={<CarDetails cars={cars}/>}
+        />
+
+        <Route
+          path="/not-found"
+          element={<NotFound/>}
+        />
+        <Route
+          path="*"
+          element={<NotFound/>}
+        />
+      </Routes>
+    </BrowserRouter>
+  );
 }
+
 
 export default App;
