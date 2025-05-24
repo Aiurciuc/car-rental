@@ -6,8 +6,19 @@
   z-index: 1000;
   background: var(--primary);
   padding: 0px 50px;
+  display: flex;
+  align-items: center;
 }
 
+.logo {
+   object-fit: cover;
+   height: 70%;
+   cursor: pointer;
+  // width: 70px;
+  // height: 70px;
+}
+
+
 .title{
-  margin:0;
+  margin-left: 20px;
 }
