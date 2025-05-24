@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import { defaultVehicleSorting } from "./constants/vehicleSortOptions";
 import styles from "./CarsAvailable.module.scss";
-import Layout from "../../components/shared/Layout/Layout";
 import Legend from "../../components/Legend/Legend";
 import CarsOptions from "./components/CarsOptions/CarsOptions";
 import CarCard from "./components/CarCard/CarCard";
@@ -17,7 +16,7 @@ function CarsAvailable({ legend, cars }) {
   }
 
   return (
-    <Layout>
+    <>
       <Legend
         pickUpDateTime={legend.pickUpDateTime}
         pickUpLocation={legend.pickUpLocation.name}
@@ -31,7 +30,7 @@ function CarsAvailable({ legend, cars }) {
           <CarCard key={car.id} car={car} />
         ))}
       </section>
-    </Layout>
+    </>
   );
 }
 

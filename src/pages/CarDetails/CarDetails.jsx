@@ -1,4 +1,3 @@
-import Layout from "../../components/shared/Layout/Layout";
 import styles from "./CarDetails.module.scss";
 import { Card } from "../../components/shared/Card/Card";
 import { Navigate, useNavigate, useParams } from "react-router";
@@ -27,7 +26,6 @@ function CarDetails({ cars }) {
   } = foundCar;
 
   return (
-    <Layout>
       <Card.Root
         className={styles.card}
       >
@@ -83,7 +81,6 @@ function CarDetails({ cars }) {
           </div>
         </Card.Footer>
       </Card.Root>
-    </Layout>
   );
 }
 
