@@ -1,10 +1,10 @@
-import VehicleFeatures from "./VehicleFeatures/VehicleFeatures";
-import styles from "./Vehicle.module.scss";
-import { Card } from "../shared/Card/Card";
-import Vendor from "./Vendor/Vendor";
-import Button from "../shared/Button/Button";
+import styles from "./CarCard.module.scss";
+import Vendor from "../Vendor/Vendor";
+import CarFeatures from "../CarFeatures/CarFeatures";
+import {Card} from "../../../../components/shared/Card/Card";
+import Button from "../../../../components/shared/Button/Button";
 
-function Vehicle({
+function CarCard({
   car: {
     pictureURL,
     vehMakeModel,
@@ -29,11 +29,11 @@ function Vehicle({
           <img
             src={pictureURL}
             alt={vehMakeModel.name}
-            className={styles.vehicleImage}
+            className={styles.carImage}
           />
         )}
 
-        <VehicleFeatures
+        <CarFeatures
           bag={baggageQuantity}
           fuel={fuelType}
           door={doorCount}
@@ -59,4 +59,4 @@ function Vehicle({
   );
 }
 
-export default Vehicle;
+export default CarCard;

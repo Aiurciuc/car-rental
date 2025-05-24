@@ -1,10 +1,14 @@
-import styles from "./Layout.module.scss";
+import React from 'react';
+import styles from './Layout.module.scss';
+import Header from './Header/Header';
 
-function Layout({ children, className='',  ...props }) {
-
+function Layout({ children }) {
   return (
-    <div className={`${styles.layout} ${className}`}  {...props}>
-      {children}
+    <div className="layout-container">
+      <Header />
+      <main className={styles.main}>
+        {children}
+      </main>
     </div>
   );
 }

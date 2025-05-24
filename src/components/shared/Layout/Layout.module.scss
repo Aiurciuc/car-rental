@@ -1,7 +1,7 @@
-.layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
+.main {
   max-width: 90vw;;
   min-height: 100vh;
+  position: relative;
+  top: 70px;
+  margin: 20px auto;
 }

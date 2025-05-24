@@ -1,8 +1,8 @@
-import styles from "./VehicleFeatures.module.scss";
+import styles from "./CarFeatures.module.scss";
 
-function VehicleFeatures({ bag, fuel, door, person, snowflake, transmission }) {
+function CarFeatures({ bag, fuel, door, person, snowflake, transmission }) {
   return (
-    <div className={styles.vehicleFeatures}>
+    <div className={styles.carFeatures}>
       {bag && (
         <div className={styles.feature}>
           <img className={styles.icon} src="/src/assets/Icons/bag.svg" alt={bag} />
@@ -43,4 +43,4 @@ function VehicleFeatures({ bag, fuel, door, person, snowflake, transmission }) {
   );
 }
 
-export default VehicleFeatures;
+export default CarFeatures;

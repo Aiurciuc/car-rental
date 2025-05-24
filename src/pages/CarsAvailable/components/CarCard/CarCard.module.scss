@@ -1,4 +1,4 @@
-.vehicleImage {
+.carImage {
   width: 70%;
   object-fit: cover;
   background: var(--grey-light);
@@ -6,13 +6,6 @@
   margin-left: auto;
   margin-right: auto;
 }
-
-// .priceContainer {
-//   display: flex;
-//   // justify-content: space-between;
-//   align-items: center;
-//   margin-top: 1rem;
-// }
 
 .price {
   font-weight: bold;

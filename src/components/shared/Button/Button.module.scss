@@ -5,12 +5,19 @@
   width: 100%;
   cursor: pointer;
 
-  &:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  &:hover:not(:disabled) {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   }
 
-  &:active {
+  &:active:not(:disabled) {
     transform: scale(0.97);
+  }
+
+  &:disabled {
+    background: var(--grey-disabled);
+    color: var(--black);
+    cursor: not-allowed;
+    border: 1px solid var(--grey-disabled);
   }
 }
 
@@ -25,3 +32,9 @@
   color: var(--primary);
   border: 1px solid var(--primary);
 }
+
+// .disabled {
+//   background-color: var(--grey-light);
+//   color: var(--grey);
+//   cursor: not-allowed;
+// }
