@@ -10,3 +10,9 @@
 .dropdown {
   min-width: 220px;
 }
+
+@media (max-width: 640px) {
+ .menu {
+    width:100%
+  }
+}

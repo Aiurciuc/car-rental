@@ -22,3 +22,9 @@
   width: var(--font-body-L);
   margin-right: 0.5rem;
 }
+
+@media (max-width: 640px) {
+ .legend {
+    display: block
+  }
+}

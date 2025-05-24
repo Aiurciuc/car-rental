@@ -23,7 +23,7 @@ function CarCard({
   const navigate = useNavigate();
 
   return (
-    <Card.Root aria-label={`Car ${vehMakeModel.name}`}>
+    <Card.Root className={styles.carCard} aria-label={`Car ${vehMakeModel.name}`}>
       <Card.Header title={vehMakeModel.name}>
         <Vendor vendor={vendor.name} />
       </Card.Header>

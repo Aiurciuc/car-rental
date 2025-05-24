@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { mapCarsResponse } from "./utils/carsMapping";
 import CarsAvailable from "./pages/CarsAvailable/CarsAvailable";
-import { BrowserRouter, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router";
 import CarDetails from "./pages/CarDetails/CarDetails";
 import NotFound from "./pages/NotFound/NotFound";
 import styles from "./App.module.scss";
