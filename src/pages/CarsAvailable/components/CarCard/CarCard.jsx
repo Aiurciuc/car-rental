@@ -23,7 +23,7 @@ function CarCard({
   const navigate = useNavigate();
 
   return (
-    <Card.Root>
+    <Card.Root aria-label={`Car ${vehMakeModel.name}`}>
       <Card.Header title={vehMakeModel.name}>
         <Vendor vendor={vendor.name} />
       </Card.Header>
@@ -55,8 +55,8 @@ function CarCard({
           <span className="body-S">{price.currencyCode}</span>
         </div>
         <div className={styles.buttons}>
-          <Button inverted={true} onClick={() => navigate(`/car/${id}`)}>Details</Button>
-          <Button onClick={() => console.log(`Car ${vehMakeModel.name} was reserved`)}>Reserve</Button>
+          <Button aria-label={`View details for ${vehMakeModel.name}`} inverted={true} onClick={() => navigate(`/car/${id}`)}>Details</Button>
+          <Button aria-label={`Reserve ${vehMakeModel.name}`} onClick={() => console.log(`Car ${vehMakeModel.name} was reserved`)}>Reserve</Button>
         </div>
       </Card.Footer>
     </Card.Root>
