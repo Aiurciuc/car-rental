@@ -76,7 +76,7 @@ function CarDetails({ cars }) {
         </Card.Content>
         <Card.Footer>
           <div className={styles.buttons}>
-            <Button inverted={true} onClick={() => navigate(`/car`)}>
+            <Button inverted={true} onClick={() => navigate(`/`)}>
               Back
             </Button>
             <Button onClick={() => console.log(`Car ${vehMakeModel.name} was reserved`)}>Reserve</Button>
