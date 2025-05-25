@@ -26,9 +26,12 @@ Simple Car Rental prototype
 1. **Clone the repository:**
    ```sh
    git clone https://github.com/Aiurciuc/car-rental.git
+   ```
+2. **Change directory:**
+   ```sh
    cd car-rental
    ```
-2. **Install dependencies:**
+3. **Install dependencies:**
    ```sh
    npm install
    ```
