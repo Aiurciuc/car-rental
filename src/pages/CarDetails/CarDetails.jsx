@@ -42,31 +42,31 @@ function CarDetails({ cars }) {
             />
           )}
           <dl className={styles.infoSection}>
-            <div className={styles.detailRow}>
-              <dt>Vendor:</dt> <dd>{vendor.name}</dd>
+            <div className={`body-L ${styles.detailRow}`}>
+              <dt>Vendor:</dt> <dd className="semibold">{vendor.name}</dd>
             </div>
-            <div className={styles.detailRow}>
-              <dt>Fuel:</dt> <dd>{fuelType}</dd>
+            <div className={`body-L ${styles.detailRow}`}>
+              <dt>Fuel:</dt> <dd className="semibold">{fuelType}</dd>
             </div>
-            <div className={styles.detailRow}>
-              <dt>Transmission:</dt> <dd>{transmissionType}</dd>
+            <div className={`body-L ${styles.detailRow}`}>
+              <dt>Transmission:</dt> <dd className="semibold">{transmissionType}</dd>
             </div>
-            <div className={styles.detailRow}>
-              <dt>Passengers:</dt> <dd>{passengerQuantity}</dd>
+            <div className={`body-L ${styles.detailRow}`}>
+              <dt>Passengers:</dt> <dd className="semibold">{passengerQuantity}</dd>
             </div>
-            <div className={styles.detailRow}>
-              <dt>Bags:</dt> <dd>{baggageQuantity}</dd>
+            <div className={`body-L ${styles.detailRow}`}>
+              <dt>Bags:</dt> <dd className="semibold">{baggageQuantity}</dd>
             </div>
-            <div className={styles.detailRow}>
-              <dt>Doors:</dt> <dd>{doorCount}</dd>
+            <div className={`body-L ${styles.detailRow}`}>
+              <dt>Doors:</dt> <dd className="semibold">{doorCount}</dd>
             </div>
-            <div className={styles.detailRow}>
+            <div className={`body-L ${styles.detailRow}`}>
               <dt>Air Conditioning:</dt>
-              <dd>{airConditionInd ? "Yes" : "No"}</dd>
+              <dd className="semibold">{airConditionInd ? "Yes" : "No"}</dd>
             </div>
-            <div className={styles.detailRow}>
+            <div className={`body-L ${styles.detailRow}`}>
               <dt>Price:</dt>
-              <dd>
+              <dd className="semibold">
                 {price.estimatedTotalAmount} {price.currencyCode}
               </dd>
             </div>

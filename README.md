@@ -57,6 +57,7 @@ npm run preview
   - `pages/` — Route-level pages
   - `scss/` — SCSS variables and global styles
   - `utils/` — Utility functions
+  - `hooks/` - Custom Hooks used across the app
 - `public/` — Static assets
 
 
