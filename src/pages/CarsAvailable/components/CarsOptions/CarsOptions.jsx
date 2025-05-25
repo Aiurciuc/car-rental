@@ -1,5 +1,5 @@
 import { vehicleSortOptions } from "../../constants/vehicleSortOptions";
-import { Dropdown } from "../../../../components/shared/Dropdown/Dropdown";
+import { Dropdown } from "../../../../components/Dropdown/Dropdown";
 import styles from "./CarsOptions.module.scss";
 import { memo } from "react";
 

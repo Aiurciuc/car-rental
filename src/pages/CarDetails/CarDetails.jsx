@@ -1,7 +1,7 @@
 import styles from "./CarDetails.module.scss";
-import { Card } from "../../components/shared/Card/Card";
+import { Card } from "../../components/Card/Card";
 import { Navigate, useNavigate, useParams } from "react-router";
-import Button from "../../components/shared/Button/Button";
+import Button from "../../components/Button/Button";
 
 function CarDetails({ cars }) {
   const navigate = useNavigate();

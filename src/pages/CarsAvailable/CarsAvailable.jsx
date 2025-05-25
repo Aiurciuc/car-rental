@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { defaultVehicleSorting } from "./constants/vehicleSortOptions";
 import styles from "./CarsAvailable.module.scss";
-import Legend from "../../components/Legend/Legend";
+import Legend from "./components/Legend/Legend";
 import CarsOptions from "./components/CarsOptions/CarsOptions";
 import CarCard from "./components/CarCard/CarCard";
 import { sortCars } from "./utils/sortCars";

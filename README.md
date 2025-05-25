@@ -1,12 +1,62 @@
-# React + Vite
+# Car Rental 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Simple Car Rental prototype
+## Features
+- Display available cars using a grid of cards (for a predefined set of location & time )
+- Show search date & time inside a "legend" section ( search not implemented)
+- Show each car features and details inside the card
+- Possibility to navigate to a detail page for each available car
+- Handle undefined routes
 
-Currently, two official plugins are available:
+## Dependencies
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **react-router**: Used for routing.
+- **@tanstack/react-query**: Used for data fetching
+- **sass**: SCSS support for styling components.
 
-## Expanding the ESLint configuration
+> All dependencies are listed in `package.json` and will be installed automatically with `npm install`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) 
+- [npm](https://www.npmjs.com/) 
+### Installation
+1. **Clone the repository:**
+   ```sh
+   git clone <your-repo-url>
+   cd car-rental
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+### Running the App Locally
+Start the development server:
+```sh
+npm run dev
+```
+- The app will be available at [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
+
+### Building for Production
+To create a production-ready build:
+```sh
+npm run build
+```
+The output will be in the `dist/` folder.
+
+To preview the production build locally:
+```sh
+npm run preview
+```
+
+## Project Structure
+- `src/` — Main source code
+  - `components/` — Shared components used across the app
+  - `pages/` — Route-level pages
+  - `scss/` — SCSS variables and global styles
+  - `utils/` — Utility functions
+- `public/` — Static assets
+
+

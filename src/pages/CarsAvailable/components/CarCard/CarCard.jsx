@@ -1,8 +1,8 @@
 import styles from "./CarCard.module.scss";
 import Vendor from "../Vendor/Vendor";
 import CarFeatures from "../CarFeatures/CarFeatures";
-import {Card} from "../../../../components/shared/Card/Card";
-import Button from "../../../../components/shared/Button/Button";
+import {Card} from "../../../../components/Card/Card";
+import Button from "../../../../components/Button/Button";
 import { useNavigate } from "react-router";
 
 function CarCard({

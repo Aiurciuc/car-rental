@@ -1,5 +1,5 @@
 import styles from "./Legend.module.scss";
-import { formatDateTime } from "../../utils/formatDateTime";
+import { formatDateTime } from "../../../../utils/formatDateTime";
 
 function Legend({
   pickUpDateTime,
