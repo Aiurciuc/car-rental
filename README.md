@@ -25,7 +25,7 @@ Simple Car Rental prototype
 ### Installation
 1. **Clone the repository:**
    ```sh
-   git clone <your-repo-url>
+   git clone https://github.com/Aiurciuc/car-rental.git
    cd car-rental
    ```
 2. **Install dependencies:**
