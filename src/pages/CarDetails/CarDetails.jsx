@@ -61,7 +61,7 @@ function CarDetails({ cars }) {
               <dt>Doors:</dt> <dd>{doorCount}</dd>
             </div>
             <div className={styles.detailRow}>
-              <dt>Air Conditioning:</dt>{" "}
+              <dt>Air Conditioning:</dt>
               <dd>{airConditionInd ? "Yes" : "No"}</dd>
             </div>
             <div className={styles.detailRow}>

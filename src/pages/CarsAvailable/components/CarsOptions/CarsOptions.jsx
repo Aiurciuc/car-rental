@@ -1,8 +1,9 @@
 import { vehicleSortOptions } from "../../constants/vehicleSortOptions";
 import { Dropdown } from "../../../../components/shared/Dropdown/Dropdown";
 import styles from "./CarsOptions.module.scss";
+import { memo } from "react";
 
-function CarsOptions({ sortBy, onSortChange }) {
+const CarsOptions = memo(function({ sortBy, onSortChange }) {
   return (
     <div className={styles.menu}>
       <Dropdown.Root >
@@ -22,6 +23,6 @@ function CarsOptions({ sortBy, onSortChange }) {
       </Dropdown.Root>
     </div>
   );
-}
+})
 
 export default CarsOptions;

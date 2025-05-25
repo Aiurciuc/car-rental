@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, createContext, useContext } from "react";
+import { useState, useRef, useEffect, createContext, useContext, memo } from "react";
 import styles from "./Dropdown.module.scss";
 import Button from "../Button/Button";
 
@@ -44,7 +44,7 @@ function Root({ children, className }) {
   );
 }
 
-function Select({
+const Select =  memo(function Select({
   options = [],
   value,
   onChange,
@@ -104,7 +104,7 @@ function Select({
       )}
     </>
   );
-}
+})
 
 export const Dropdown = {
   Root,

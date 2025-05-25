@@ -1,3 +1,4 @@
+import { memo } from "react";
 import styles from "./Vendor.module.scss";
 
 const vendorLogos = {
@@ -6,7 +7,7 @@ const vendorLogos = {
   hertz: "/src/assets/Vendors/hertz.svg",
 };
 
-function Vendor({ vendor }) {
+const Vendor = memo(function ({ vendor }) {
   vendor = vendor.toLowerCase();
   return (
     <>
@@ -19,6 +20,6 @@ function Vendor({ vendor }) {
       )}
     </>
   );
-}
+})
 
 export default Vendor;

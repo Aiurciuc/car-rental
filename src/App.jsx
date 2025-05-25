@@ -13,12 +13,10 @@ function App() {
       fetch("https://ajaxgeo.cartrawler.com/ctabe/cars.json")
         .then((res) => res.json())
         .then((response) => mapCarsResponse(response)),
-    staleTime: Infinity,
   });
 
   const { cars, legend } = data || {};
 
-  console.log(data);
 
   if (isLoading)
     return (
