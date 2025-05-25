@@ -4,7 +4,8 @@ import CarsAvailable from "./pages/CarsAvailable/CarsAvailable";
 import { Routes, Route } from "react-router";
 import CarDetails from "./pages/CarDetails/CarDetails";
 import NotFound from "./pages/NotFound/NotFound";
-import styles from "./App.module.scss";
+import ReservationDetails from "./pages/ReservationDetails/ReservationDetails";
+import CenteredMessage from "./components/CenteredMessage/CenteredMessage";
 
 function App() {
   const { isLoading, error, data } = useQuery({
@@ -17,25 +18,17 @@ function App() {
 
   const { cars, legend } = data || {};
 
+  console.log(data);
 
-  if (isLoading)
-    return (
-      <section className={styles.messageSection}>
-        <h1 className="title-XL">Loading...</h1>
-      </section>
-    );
+  if (isLoading) return <CenteredMessage message="Loading..." />;
 
-  if (error)
-    return (
-      <section className={styles.messageSection}>
-        <h1 className="title-XL">Error: {error.message}</h1>
-      </section>
-    );
+  if (error) return <CenteredMessage message={`Error: ${error.message}`} />;
 
   return (
     <Routes>
       <Route path="/" element={<CarsAvailable legend={legend} cars={cars} />} />
       <Route path="/car/:id" element={<CarDetails cars={cars} />} />
+      <Route path="/reservation" element={<ReservationDetails />} />
 
       <Route path="/not-found" element={<NotFound />} />
       <Route path="*" element={<NotFound />} />

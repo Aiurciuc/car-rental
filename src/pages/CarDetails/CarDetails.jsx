@@ -9,8 +9,8 @@ function CarDetails({ cars }) {
 
   const foundCar = cars?.find((car) => car.id === id);
 
-  if(!foundCar) {
-    return <Navigate to="/not-found" replace />
+  if (!foundCar) {
+    return <Navigate to="/not-found" replace />;
   }
   const {
     pictureURL,
@@ -25,62 +25,72 @@ function CarDetails({ cars }) {
     price,
   } = foundCar;
 
+  const reservationDetails = {
+    name: vehMakeModel.name,
+    pictureURL,
+    price,
+    vendor,
+  };
+
   return (
-      <Card.Root
-        className={styles.card}
-      >
-        <Card.Header
-          fontClass="title-M"
-          title={vehMakeModel.name}
-        ></Card.Header>
-        <Card.Content>
-          {pictureURL && (
-            <img
-              src={pictureURL}
-              alt={vehMakeModel.name}
-              className={styles.carImage}
-            />
-          )}
-          <dl className={styles.infoSection}>
-            <div className={`body-L ${styles.detailRow}`}>
-              <dt>Vendor:</dt> <dd className="semibold">{vendor.name}</dd>
-            </div>
-            <div className={`body-L ${styles.detailRow}`}>
-              <dt>Fuel:</dt> <dd className="semibold">{fuelType}</dd>
-            </div>
-            <div className={`body-L ${styles.detailRow}`}>
-              <dt>Transmission:</dt> <dd className="semibold">{transmissionType}</dd>
-            </div>
-            <div className={`body-L ${styles.detailRow}`}>
-              <dt>Passengers:</dt> <dd className="semibold">{passengerQuantity}</dd>
-            </div>
-            <div className={`body-L ${styles.detailRow}`}>
-              <dt>Bags:</dt> <dd className="semibold">{baggageQuantity}</dd>
-            </div>
-            <div className={`body-L ${styles.detailRow}`}>
-              <dt>Doors:</dt> <dd className="semibold">{doorCount}</dd>
-            </div>
-            <div className={`body-L ${styles.detailRow}`}>
-              <dt>Air Conditioning:</dt>
-              <dd className="semibold">{airConditionInd ? "Yes" : "No"}</dd>
-            </div>
-            <div className={`body-L ${styles.detailRow}`}>
-              <dt>Price:</dt>
-              <dd className="semibold">
-                {price.estimatedTotalAmount} {price.currencyCode}
-              </dd>
-            </div>
-          </dl>
-        </Card.Content>
-        <Card.Footer>
-          <div className={styles.buttons}>
-            <Button inverted={true} onClick={() => navigate(`/`)}>
-              Back
-            </Button>
-            <Button onClick={() => console.log(`Car ${vehMakeModel.name} was reserved`)}>Reserve</Button>
+    <Card.Root className={styles.card}>
+      <Card.Header fontClass="title-M" title={vehMakeModel.name}></Card.Header>
+      <Card.Content>
+        {pictureURL && (
+          <img
+            src={pictureURL}
+            alt={vehMakeModel.name}
+            className={styles.carImage}
+          />
+        )}
+        <dl className={styles.infoSection}>
+          <div className={`body-L ${styles.detailRow}`}>
+            <dt>Vendor:</dt> <dd className="semibold">{vendor.name}</dd>
           </div>
-        </Card.Footer>
-      </Card.Root>
+          <div className={`body-L ${styles.detailRow}`}>
+            <dt>Fuel:</dt> <dd className="semibold">{fuelType}</dd>
+          </div>
+          <div className={`body-L ${styles.detailRow}`}>
+            <dt>Transmission:</dt>{" "}
+            <dd className="semibold">{transmissionType}</dd>
+          </div>
+          <div className={`body-L ${styles.detailRow}`}>
+            <dt>Passengers:</dt>{" "}
+            <dd className="semibold">{passengerQuantity}</dd>
+          </div>
+          <div className={`body-L ${styles.detailRow}`}>
+            <dt>Bags:</dt> <dd className="semibold">{baggageQuantity}</dd>
+          </div>
+          <div className={`body-L ${styles.detailRow}`}>
+            <dt>Doors:</dt> <dd className="semibold">{doorCount}</dd>
+          </div>
+          <div className={`body-L ${styles.detailRow}`}>
+            <dt>Air Conditioning:</dt>
+            <dd className="semibold">{airConditionInd ? "Yes" : "No"}</dd>
+          </div>
+          <div className={`body-L ${styles.detailRow}`}>
+            <dt>Price:</dt>
+            <dd className="semibold">
+              {price.estimatedTotalAmount} {price.currencyCode}
+            </dd>
+          </div>
+        </dl>
+      </Card.Content>
+      <Card.Footer>
+        <div className={styles.buttons}>
+          <Button inverted={true} onClick={() => navigate(`/`)}>
+            Back
+          </Button>
+          <Button
+            onClick={() =>
+              navigate(`/reservation`, { state: { reservationDetails } })
+            }
+          >
+            Reserve
+          </Button>
+        </div>
+      </Card.Footer>
+    </Card.Root>
   );
 }
 

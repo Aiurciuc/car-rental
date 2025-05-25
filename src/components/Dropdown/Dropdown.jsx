@@ -76,7 +76,7 @@ const Select =  memo(function Select({
       >
         <span>{value ? value.label : placeholder}</span>
         <span className={styles.arrowContainer}>
-          <img className={styles.icon} src="/src/assets/Icons/angle-down.svg" alt="Toggle dropdown" />
+          <img className={styles.icon} src="/assets/Icons/angle-down.svg" alt="Toggle dropdown" />
         </span>
       </Button>
       {open && (

@@ -14,7 +14,7 @@ function Header({ title, children, fontClass="subtitle-M" }) {
 }
 
 function Content({ children }) {
-  return <main className={styles.cardContent}>{children}</main>;
+  return <div className={styles.cardContent}>{children}</div>;
 }
 
 function Footer({ children }) {

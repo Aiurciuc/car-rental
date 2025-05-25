@@ -1,7 +1,7 @@
 import styles from "./CarCard.module.scss";
 import Vendor from "../Vendor/Vendor";
 import CarFeatures from "../CarFeatures/CarFeatures";
-import {Card} from "../../../../components/Card/Card";
+import { Card } from "../../../../components/Card/Card";
 import Button from "../../../../components/Button/Button";
 import { useNavigate } from "react-router";
 
@@ -22,8 +22,18 @@ function CarCard({
 }) {
   const navigate = useNavigate();
 
+  const reservationDetails = {
+    name: vehMakeModel.name,
+    pictureURL, 
+    price,
+    vendor,
+  };
+
   return (
-    <Card.Root className={styles.carCard} aria-label={`Car ${vehMakeModel.name}`}>
+    <Card.Root
+      className={styles.carCard}
+      aria-label={`Car ${vehMakeModel.name}`}
+    >
       <Card.Header title={vehMakeModel.name}>
         <Vendor vendor={vendor.name} />
       </Card.Header>
@@ -55,8 +65,21 @@ function CarCard({
           <span className="body-S">{price.currencyCode}</span>
         </div>
         <div className={styles.buttons}>
-          <Button aria-label={`View details for ${vehMakeModel.name}`} inverted={true} onClick={() => navigate(`/car/${id}`)}>Details</Button>
-          <Button aria-label={`Reserve ${vehMakeModel.name}`} onClick={() => console.log(`Car ${vehMakeModel.name} was reserved`)}>Reserve</Button>
+          <Button
+            aria-label={`View details for ${vehMakeModel.name}`}
+            inverted={true}
+            onClick={() => navigate(`/car/${id}`)}
+          >
+            Details
+          </Button>
+          <Button
+            aria-label={`Reserve ${vehMakeModel.name}`}
+            onClick={() =>
+              navigate(`/reservation`, { state: { reservationDetails } })
+            }
+          >
+            Reserve
+          </Button>
         </div>
       </Card.Footer>
     </Card.Root>

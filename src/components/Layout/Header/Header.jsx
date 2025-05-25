@@ -8,7 +8,7 @@ function Header() {
         <Link to="/" aria-label="Navigate to home">
           <img
             className={styles.logo}
-            src="/src/assets/logo/partner.svg"
+            src="/assets/Logo/partner.svg"
             alt="Car Rental Logo"
           />
         </Link>

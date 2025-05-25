@@ -2,9 +2,9 @@ import { memo } from "react";
 import styles from "./Vendor.module.scss";
 
 const vendorLogos = {
-  alamo: "/src/assets/Vendors/alamo.svg",
-  avis: "/src/assets/Vendors/avis.svg",
-  hertz: "/src/assets/Vendors/hertz.svg",
+  alamo: "/assets/Vendors/alamo.svg",
+  avis: "/assets/Vendors/avis.svg",
+  hertz: "/assets/Vendors/hertz.svg",
 };
 
 const Vendor = memo(function ({ vendor }) {

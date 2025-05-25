@@ -1,4 +1,4 @@
-import { vehicleSortOptions } from "../../constants/vehicleSortOptions";
+import { carsSortOptions } from "../../constants/carsSortOptions";
 import { Dropdown } from "../../../../components/Dropdown/Dropdown";
 import styles from "./CarsOptions.module.scss";
 import { memo } from "react";
@@ -18,7 +18,7 @@ const CarsOptions = memo(function({ sortBy, onSortChange }) {
           onChange={onSortChange}
           placeholder="Select..."
           className={styles.dropdown}
-          options={vehicleSortOptions}
+          options={carsSortOptions}
         />
       </Dropdown.Root>
     </div>

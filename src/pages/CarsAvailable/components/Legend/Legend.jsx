@@ -16,7 +16,7 @@ function Legend({
         <span className={`body-L`}>
           <img
             className={styles.icon}
-            src="/src/assets/Icons/plane.svg"
+            src="/assets/Icons/plane.svg"
             alt="plane"
           />
 
@@ -29,7 +29,7 @@ function Legend({
         <span className={`body-L`}>
           <img
             className={styles.icon}
-            src="/src/assets/Icons/plane.svg"
+            src="/assets/Icons/plane.svg"
             alt="plane"
           />
           {returnLocation}

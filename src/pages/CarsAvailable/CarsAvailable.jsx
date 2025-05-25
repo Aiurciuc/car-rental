@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { defaultVehicleSorting } from "./constants/vehicleSortOptions";
+import { defaultCarsSorting } from "./constants/carsSortOptions";
 import styles from "./CarsAvailable.module.scss";
 import Legend from "./components/Legend/Legend";
 import CarsOptions from "./components/CarsOptions/CarsOptions";
@@ -8,7 +8,7 @@ import { sortCars } from "./utils/sortCars";
 import { useLocalStoredState } from "../../hooks/useLocalStoredState";
 
 function CarsAvailable({ legend, cars }) {
-  const [sortBy, setSortBy] = useLocalStoredState('carSorting', defaultVehicleSorting);
+  const [sortBy, setSortBy] = useLocalStoredState('carSorting', defaultCarsSorting);
 
   const carsList = useMemo(() => sortCars(cars, sortBy), [cars, sortBy]);
 

@@ -7,6 +7,7 @@ Simple Car Rental prototype
 - Show each car features and details inside the card
 - Possibility to navigate to a detail page for each available car
 - Handle undefined routes
+- Display the details of the reservation in a separate page
 
 ## Dependencies
 
